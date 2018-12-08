@@ -1,13 +1,16 @@
 ![alt text][logo]
-[logo]: https://github.com/51j0/Android-Storage-Extractor/blob/master/res/android.png "Android"
+[logo]: https://raw.githubusercontent.com/51j0/Android-Storage-Extractor/master/res/android.png "Android"
 # Android-Storage-Extractor
 *v0.9*
 
-A tool to extract *local data storage* of an Android application in one **__click__**.
-
-***
+A tool to extract *local data storage* of an Android application in **__one click__**.
+___
 Usage
 ------------------
+
+> git clone https://github.com/51j0/Android-Storage-Extractor.git
+
+> cd Android-Storage-Extractor/
 
 > python extract.py
 >
@@ -19,16 +22,7 @@ Usage
 >
 > -h    -help
 
-***
-
-Run
-------------------
-
-> __Wizard mode__:
->
-> python extract.py
-
-> __Command line__:
+> __Example__:
 >
 > python extract.py -p com.android.chrome -o /root/Desktop/  
 
