@@ -1,30 +1,26 @@
-# Android-Storage-Extractor
-![alt text](https://raw.githubusercontent.com/51j0/Android-Storage-Extractor/master/res/android.png "icon")
 
+![alt text](https://raw.githubusercontent.com/51j0/Android-Storage-Extractor/master/res/robot.png "icon")
+## Android-Storage-Extractor
+###### v0.9
 
-*v0.9*
-
-A tool to extract *local data storage* of an Android application in **__one click__**.
+A tool to extract local data storage of an Android application in **__one click__**.
 ___
 Usage
 ------------------
 
-> git clone https://github.com/51j0/Android-Storage-Extractor.git
+```python
+git clone https://github.com/51j0/Android-Storage-Extractor.git
+cd Android-Storage-Extractor/
+python extract.py
 
-> cd Android-Storage-Extractor/
+Options:
+  -p    -package name
+  -o    -output directory
 
-> python extract.py
->
-> __Options__:
->
-> -p    -package name
->
-> -o    -output directory
->
-> -h    -help
+Example:
+ python extract.py -p com.android.chrome -o /root/Desktop/
+ python extract.py -p com.android.chrome
+```
 
-> __Example__:
->
-> python extract.py -p com.android.chrome -o /root/Desktop/  
-
-> python extract.py -p com.android.chrome
+![alt text](https://raw.githubusercontent.com/51j0/Android-Storage-Extractor/master/res/android.png "icon")
+<div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
