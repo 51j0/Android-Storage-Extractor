@@ -93,7 +93,7 @@ def main(argv):
     try:
         opts, args = getopt.getopt(argv,"hp:o:",["package=","output="])
     except getopt.GetoptError:
-        print 'extract.py -p <application package name> -o <output folder>'
+        print 'extract.py -p <package name> -o <output folder>'
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
