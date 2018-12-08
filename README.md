@@ -1,3 +1,5 @@
+![alt text][logo]
+[logo]: https://github.com/51j0/Android-Storage-Extractor/blob/master/res/android.png "Android"
 # Android-Storage-Extractor
 *v0.9*
 
