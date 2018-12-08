@@ -19,17 +19,17 @@ def getRealPackageName(package_name):
     if counts > 1:
         print orginal_package_name
         print "\n---------------------------------------"
-        print "We found more than "+str(counts)+" Packages"
+        print "Found "+str(counts)+" packages"
         text = raw_input("Enter the correct package name: ")
         if text == '':
-            terminate("Terminating")
+            terminate("Ending script")
         else:
             orginal_package_name = getRealPackageName(text);
     elif counts == 0:
         print "\n---------------------------------------"
         text = raw_input("No application found with the given package name.\nEnter a correct package name: ")
         if text == '':
-            terminate("Terminating")
+            terminate("Ending script")
         else:
             orginal_package_name = getRealPackageName(text);
 
@@ -46,8 +46,8 @@ def runwizard():
     os.system("echo 'Listing Your Device'");
     os.system("adb devices -l")
     os.system("echo '--------------------------------------------------------------'");
-    package_name = raw_input("Enter Package Name: ")
 
+    package_name = raw_input("Enter Package Name: ")
     package_name = getRealPackageName(package_name)
     os.system("echo 'Package: "+package_name+"'");
     extracting(package_name,'A')
@@ -55,19 +55,14 @@ def runwizard():
 def extracting(package_name,workspace):
     #SEARCHING FOR PACKAGE
     os.system("echo '-------------------------------------------'")
-    os.system("echo 'Intitaing Extraction Process'")
-    os.system("echo 'Searching For: '"+package_name)
+    os.system("echo 'locating '"+package_name)
     mobile_workspace = "/sdcard/Android-Extractor/"
-
-
-
     #Creating Folder
-    os.system("echo 'Creating Workspace Inside: '"+mobile_workspace)
+    os.system("echo 'Creating a workspace inside: '"+mobile_workspace)
     command = "adb shell mkdir -p "+mobile_workspace
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=None, shell=True)
     output = process.communicate()
-
-
+    os.system("echo 'intitaing extraction'")
     os.system("echo 'Copying in Progress... '")
     command = 'adb shell "su -c cp -RFd /data/data/'+package_name+'/ '+mobile_workspace+'"'
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=None, shell=True)
@@ -83,7 +78,7 @@ def extracting(package_name,workspace):
         command  = "adb pull "+mobile_workspace+package_name+"/ '"+workspace+"'"
 
     process = subprocess.call(command, shell=True)
-    os.system("echo 'Succesfully Completed '")
+    os.system("echo 'Succesfully Completed'")
     sys.exit(2)
 
 
