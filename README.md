@@ -1,6 +1,7 @@
-![alt text][logo]
-[logo]: https://raw.githubusercontent.com/51j0/Android-Storage-Extractor/master/res/android.png "Android"
 # Android-Storage-Extractor
+![alt text](https://raw.githubusercontent.com/51j0/Android-Storage-Extractor/master/res/android.png "icon")
+
+
 *v0.9*
 
 A tool to extract *local data storage* of an Android application in **__one click__**.
